@@ -1,4 +1,4 @@
-> 基于mysql> select * from T where ID = 10;简略分析mysql走过的流程。 首先mysql 是分层的，查询语句首先经过server 层，然后进入存储引擎层（innodb）。 server 层又分为流程： 连接器---查询缓存-----分析器-----优化器---执行器。引擎层可以是innodb和myisam 等，它们共用一个server
+> 基于mysql> select * from T where ID = 10;简略分析mysql走过的流程。先mysql 是分层的，查询语句首先经过server 层，然后进入存储引擎层（innodb）。 server 层又分为流程： 连接器---查询缓存-----分析器-----优化器---执行器。引擎层可以是innodb和myisam 等，它们共用一个server
 
 第一步。连接器----负责和客户端建立连接（TCP握手），验证获取权限，维持和管理连接
 
